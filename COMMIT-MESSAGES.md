@@ -16,12 +16,9 @@ Good Pathwise commit summaries should reshape how you approach version control: 
 
 ## Non-goals
 
-- Changelog generation
-  - Changelogs should be written by humans for humans. That said, a list of Pathwise commits offers a great starting point for distilling code changes into human-readable release notes.
-- Pull-request titles or squash commits
-  - While similar heuristics can inform PR titles, Pathwise summaries are optimized for atomic commits, not aggregation.
-- Merge commits or nonlinear history
-  - This convention assumes that your Git workflow keeps development history in its entirety, and favors local rebasing for organization.
+- **Changelog generation** -- Changelogs should be written by humans, for humans. That said, a list of Pathwise commits offers a great starting point for distilling code changes into human-readable release notes.
+- **Pull-request titles or squash commits** -- While similar heuristics can inform PR titles, Pathwise summaries are optimized for atomic commits, not aggregation.
+- **Merge commits or nonlinear history** -- This convention assumes that your Git workflow keeps development history in its entirety, and favors local rebasing for organization.
 
 ## Guidelines
 
