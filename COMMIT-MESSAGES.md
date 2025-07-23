@@ -41,6 +41,7 @@ Use the plus sign (`+`) to combine segments at the same hierarchical level when 
 
 ### Naming and syntax rules
 
+- Prefer lower-case for path segments, especially when referring to file names. Reserve upper-case for language-level identifiers (e.g., types, constants).
 - The summary must include a short message after the final path segment to describe the nature of the change, preferably beginning with a verb.
 - Separate path segments using a colon and a space (`: `).
 - Do *not* wrap path segments (or any code) in quotes or backticks.
