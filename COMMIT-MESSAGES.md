@@ -51,7 +51,7 @@ Use the plus sign (`+`) to combine segments at the same hierarchical level when 
 
 If you find it difficult to summarize a commit using this format, it's a strong sign that the change should be split into smaller, more focused commits--perhaps even re-ordered.
 
-# Why not Conventional Commits?
+## Why not Conventional Commits?
 
 - The verb-prefixes don't add meaningful value to the commit log and don't help with reviewability.
 - Changelogs should start from a list of commits since the last tagged release and be curated by a human to communicate relevant information to consumers.
@@ -62,3 +62,32 @@ If you find it difficult to summarize a commit using this format, it's a strong 
 - Commit message bodies can explain why each change builds on the previous to achieve the intended result.
 - Conventional Commit summaries rarely indicate *where* a change was made--likely because they're too broad.
 - Ad-hoc scope identifiers in parentheses (`feat(foo):`) can conflict with past or future commits. Even when specific enough to be useful, they still introduce visual noise and consume precious space in the summary line.
+
+# Examples
+
+### Change to a single file at root
+
+```
+readme: reword the description
+```
+```
+license: change from Apache-2.0 to MIT
+```
+
+### Change in a specific file or Rust module
+
+The file changed is in `src/foo/bar.rs` and the fully qualified module path (in the public API) is `foo::bar::baz`, where each of `foo`, `bar`, `baz` are public modules.
+
+```
+foo: bar: baz: rename fn do_thing to do_many_things
+```
+
+```
+foo: bar: baz: do_many_things: replace loop with try_fold
+```
+
+### Common change among multiple semantic paths
+
+```
+flake: devShells+packages: fix rust-overlay toolchain usage
+```
