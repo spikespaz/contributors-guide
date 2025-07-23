@@ -41,15 +41,26 @@ Use the plus sign (`+`) to combine segments at the same hierarchical level when 
 
 ### Naming and syntax rules
 
+#### Naming conventions
+
 - Prefer lower-case for path segments, especially when referring to file names. Reserve upper-case for language-level identifiers (e.g., types, constants).
-- If the summary line is too long, intermediate segments may be omitted or abbreviated if they contribute no meaningful specificity. The resulting path should still intuitively lead the reader to the change, while freeing more space for the summary message.
-- The summary must include a short message after the final path segment to describe the nature of the change, preferably beginning with a verb.
+- Prefer public API identifiers when viable. Internal details should only be referenced when the change is explicitly internal.
+
+#### Path construction
+
 - Separate path segments using a colon and a space (`: `).
+- If the summary line is too long, intermediate segments may be omitted or abbreviated if they contribute no meaningful specificity. The resulting path should still intuitively lead the reader to the change, while freeing more space for the summary message.
+
+#### Summary phrasing
+
+- The summary message must appear after the final path segment's colon. It must describe the nature of the change, preferably beginning with a verb.
+
+#### Formatting and readability
+
 - Do *not* wrap path segments (or any code) in quotes or backticks.
 - Write summaries as plain text--GitHub's rendering is a distraction, not a target.
 - Do *not* employ visual markup tricks, which waste space and can be misleading.
 - Only include special characters in paths and messages when they are syntactically meaningful in the language.
-- Prefer public API identifiers when viable. Internal details should only be referenced when the change is explicitly internal.
 
 If you find it difficult to summarize a commit using this format, it's a strong sign that the change should be split into smaller, more focused commits--perhaps even re-ordered.
 
