@@ -37,8 +37,6 @@ The segments are *semantic* and *hierarchical*, not strictly tied to the filesys
 - Type, function, macro identifiers (typically the last segment)
 - Any other named entity that helps pinpoint the scope of change
 
-Use the plus sign (`+`) to combine segments at the same hierarchical level when a change affects several similar paths.
-
 ### Naming and syntax rules
 
 #### Naming conventions
@@ -49,6 +47,7 @@ Use the plus sign (`+`) to combine segments at the same hierarchical level when 
 #### Path construction
 
 - Separate path segments using a colon and a space (`: `).
+- Use the plus sign (`+`) to combine segments at the same hierarchical level when a change affects several similar paths. There shall not be spaces around this joining character.
 - If the summary line is too long, intermediate segments may be omitted or abbreviated if they contribute no meaningful specificity. The resulting path should still intuitively lead the reader to the change, while freeing more space for the summary message.
 
 #### Summary phrasing
